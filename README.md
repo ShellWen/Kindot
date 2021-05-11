@@ -21,8 +21,6 @@
     <a href="https://github.com/GoFly233/Kindot"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/GoFly233/Kindot">View Demo</a>
-    ·
     <a href="https://github.com/GoFly233/Kindot/issues">Report Bug</a>
     ·
     <a href="https://github.com/GoFly233/Kindot/issues">Request Feature</a>
