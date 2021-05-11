@@ -3,7 +3,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -155,5 +154,3 @@ Project Link: [https://github.com/GoFly233/Kindot](https://github.com/GoFly233/K
 [issues-url]: https://github.com/GoFly233/Kindot/issues
 [license-shield]: https://img.shields.io/github/license/GoFly233/Kindot.svg?style=for-the-badge
 [license-url]: https://github.com/GoFly233/Kindot/blob/master/LICENSE.md
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/GoFly233
