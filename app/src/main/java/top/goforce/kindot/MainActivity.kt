@@ -1,18 +1,16 @@
 package top.goforce.kindot
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import top.goforce.kindot.base.BaseActivity
+import top.goforce.kindot.databinding.MainActivityBinding
 import top.goforce.kindot.ui.main.MainFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commitNow()
-        }
+        val binding: MainActivityBinding =
+            DataBindingUtil.setContentView(this, R.layout.main_activity)
     }
 }
