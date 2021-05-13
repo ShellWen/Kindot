@@ -3,11 +3,28 @@ package top.goforce.kindot.base
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import top.goforce.kindot.R
 
-abstract class BaseFragment: Fragment() {
+abstract class BaseFragment<T : ViewDataBinding>(val layoutId: Int) : Fragment() {
     @Suppress("PropertyName")
     val TAG: String by lazy { this.javaClass.simpleName }
+    lateinit var binding: T
+        internal set
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        return binding.root
+    }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -22,6 +39,11 @@ abstract class BaseFragment: Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         Log.d(TAG, "$savedInstanceState -> onActivityCreated()")
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.d(TAG, "$view, $savedInstanceState -> onViewCreated()")
     }
 
     override fun onStart() {

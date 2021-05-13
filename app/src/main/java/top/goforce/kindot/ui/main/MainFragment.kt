@@ -1,27 +1,17 @@
 package top.goforce.kindot.ui.main
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
+import androidx.fragment.app.viewModels
 import top.goforce.kindot.R
 import top.goforce.kindot.base.BaseFragment
+import top.goforce.kindot.databinding.MainFragmentBinding
 
-class MainFragment : BaseFragment() {
-    private lateinit var viewModel: MainViewModel
+class MainFragment : BaseFragment<MainFragmentBinding>(R.layout.main_fragment) {
+    private val viewModel: MainViewModel by viewModels()
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
-    }
-
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
 }
