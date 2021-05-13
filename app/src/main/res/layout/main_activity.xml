@@ -10,14 +10,14 @@
 
         <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
-            app:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             android:fitsSystemWindows="true">
 
             <com.google.android.material.appbar.MaterialToolbar
+                app:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
