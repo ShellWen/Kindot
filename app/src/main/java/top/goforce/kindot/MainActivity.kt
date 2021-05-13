@@ -12,5 +12,6 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         val binding: MainActivityBinding =
             DataBindingUtil.setContentView(this, R.layout.main_activity)
+        setSupportActionBar(binding.toolbar)
     }
 }
