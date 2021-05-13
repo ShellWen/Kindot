@@ -10,7 +10,7 @@ abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d(TAG, "onCreate()")
+        Log.d(TAG, "$savedInstanceState -> onCreate()")
     }
 
     override fun onStart() {
