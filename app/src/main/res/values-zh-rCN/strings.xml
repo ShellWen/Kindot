@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kindot</string>
+    <string name="main_nav_main_label">主页</string>
+    <string name="main_nav_label">主界面</string>
+</resources>
