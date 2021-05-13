@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import top.goforce.kindot.base.BaseActivity
 import top.goforce.kindot.databinding.MainActivityBinding
-import top.goforce.kindot.ui.main.MainFragment
 
 class MainActivity : BaseActivity() {
 
