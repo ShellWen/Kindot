@@ -19,10 +19,24 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            Properties signingProperties = new Properties()
+            signingProperties.load(rootProject.file("signing.properties").newDataInputStream())
+
+            keyAlias signingProperties.keyAlias
+            keyPassword signingProperties.keyPassword
+            storeFile rootProject.file(signingProperties.storeFile)
+            storePassword signingProperties.storePassword
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
