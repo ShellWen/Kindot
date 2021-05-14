@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import top.goforce.kindot.R
 
 abstract class BaseFragment<T : ViewDataBinding>(val layoutId: Int) : Fragment() {
     @Suppress("PropertyName")
