@@ -35,11 +35,6 @@ abstract class BaseFragment<T : ViewDataBinding>(val layoutId: Int) : Fragment()
         Log.d(TAG, "$savedInstanceState -> onCreate()")
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        Log.d(TAG, "$savedInstanceState -> onActivityCreated()")
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d(TAG, "$view, $savedInstanceState -> onViewCreated()")
