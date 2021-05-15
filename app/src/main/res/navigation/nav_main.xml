@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_main"
     android:label="@string/main_nav_label"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="top.goforce.kindot.ui.main.MainFragment"
-        android:label="@string/main_nav_main_label"
-        tools:layout="@layout/main_fragment" />
+        android:id="@+id/homeFragment"
+        android:name="top.goforce.kindot.ui.home.HomeFragment"
+        android:label="@string/main_nav_home_label"
+        tools:layout="@layout/home_fragment" />
 </navigation>

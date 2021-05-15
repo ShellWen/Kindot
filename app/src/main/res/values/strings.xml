@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Kindot</string>
+    <string name="main_nav_home_label">Home</string>
     <string name="main_nav_label">Main</string>
-    <string name="main_nav_main_label">Home</string>
 </resources>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/main_nav_main"
+        android:id="@+id/main_nav_home"
         android:icon="@drawable/ic_twotone_home_24"
-        android:title="@string/main_nav_main_label"/>
+        android:title="@string/main_nav_home_label"/>
 </menu>
