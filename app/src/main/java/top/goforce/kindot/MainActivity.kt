@@ -20,7 +20,8 @@ class MainActivity : BaseActivity<MainActivityBinding>(R.layout.main_activity) {
         // TODO: 不单独开个线程会出现各种问题，寻求解决方案
         thread {
             runOnUiThread {
-                val appBarConfiguration = AppBarConfiguration(setOf(R.id.homeFragment))
+                val appBarConfiguration =
+                    AppBarConfiguration(setOf(R.id.main_nav_home, R.id.main_nav_me))
                 val navController = binding.navHostFragment.findNavController()
                 binding.toolbar
                     .setupWithNavController(navController, appBarConfiguration)

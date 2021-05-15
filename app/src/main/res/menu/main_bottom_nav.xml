@@ -4,4 +4,8 @@
         android:id="@+id/main_nav_home"
         android:icon="@drawable/ic_twotone_home_24"
         android:title="@string/main_nav_home_label"/>
+    <item
+        android:id="@+id/main_nav_me"
+        android:icon="@drawable/ic_twotone_person_24"
+        android:title="@string/main_nav_me_label"/>
 </menu>
