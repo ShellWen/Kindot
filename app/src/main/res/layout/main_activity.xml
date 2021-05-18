@@ -21,7 +21,7 @@
                 android:fitsSystemWindows="true"
                 app:layout_scrollFlags="scroll|enterAlways|snap"
                 app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
-                app:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+                android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" />
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.fragment.app.FragmentContainerView
