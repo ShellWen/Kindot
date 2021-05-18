@@ -4,4 +4,6 @@
     <string name="main_nav_label">主界面</string>
     <string name="main_nav_home_label">主页</string>
     <string name="main_nav_me_label">我</string>
+    <string name="login_status_title">登录状态</string>
+    <string name="login_status_content">当前登录状态：%1$s</string>
 </resources>

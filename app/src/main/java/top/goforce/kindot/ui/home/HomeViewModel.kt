@@ -1,7 +1,7 @@
 package top.goforce.kindot.ui.home
 
-import androidx.lifecycle.ViewModel
+import top.goforce.kindot.base.BaseViewModel
 
-class HomeViewModel : ViewModel() {
+class HomeViewModel : BaseViewModel() {
     // TODO: Implement the ViewModel
 }

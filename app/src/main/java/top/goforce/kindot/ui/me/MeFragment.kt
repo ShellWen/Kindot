@@ -12,6 +12,25 @@ class MeFragment : BaseFragment<MeFragmentBinding>(R.layout.me_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initViews()
+    }
+
+    override fun bindData() {
+        binding.run {
+            this.viewModel = this@MeFragment.viewModel
+        }
+    }
+
+    private fun initViews() {
+        binding.swipeRefresh.setOnRefreshListener {
+            refreshLoginStatus()
+        }
+    }
+
+    private fun refreshLoginStatus() {
+        binding.swipeRefresh.isRefreshing = true
+        viewModel.refreshLoginStatus()
+        binding.swipeRefresh.isRefreshing = false
     }
 
 }

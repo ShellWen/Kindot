@@ -22,8 +22,12 @@ abstract class BaseFragment<T : ViewDataBinding>(val layoutId: Int) : Fragment()
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        binding.lifecycleOwner = this
+        bindData()
         return binding.root
     }
+
+    open fun bindData() {}
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
