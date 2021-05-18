@@ -83,6 +83,9 @@ dependencies {
     implementation "ru.gildor.coroutines:kotlin-coroutines-okhttp:1.0"
     implementation "com.squareup.okhttp3:okhttp:4.9.1"
 
+    implementation "io.insert-koin:koin-android:3.0.1"
+    implementation "io.insert-koin:koin-android-ext:3.0.1"
+
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
 
@@ -93,4 +96,14 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
 
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+// 强制使用统一的 Kotlin 版本
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'org.jetbrains.kotlin') {
+            details.useVersion kotlin_version
+        }
+    }
 }
