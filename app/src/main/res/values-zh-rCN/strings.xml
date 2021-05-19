@@ -6,4 +6,10 @@
     <string name="main_nav_me_label">我</string>
     <string name="login_status_title">登录状态</string>
     <string name="login_status_content">当前登录状态：%1$s</string>
+    <string name="login_status_logon">已登录</string>
+    <string name="login_status_logout">未登录</string>
+    <string name="login_status_unknown">未知</string>
+    <string name="login_status_failed_network">网络因素获取失败</string>
+    <string name="login_status_need_refresh">需要刷新</string>
+    <string name="login_status_refreshing">正在刷新</string>
 </resources>

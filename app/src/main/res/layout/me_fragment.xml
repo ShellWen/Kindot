@@ -58,7 +58,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:text="@{@string/login_status_content(viewModel.loginStatus)}"
+                            android:text="@{@string/login_status_content(viewModel.loginStatusReadableText)}"
                             app:layout_constraintStart_toStartOf="@+id/tv_login_status_title"
                             app:layout_constraintTop_toBottomOf="@+id/tv_login_status_title" />
                     </androidx.constraintlayout.widget.ConstraintLayout>

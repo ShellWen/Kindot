@@ -6,4 +6,10 @@
     <string name="main_nav_me_label">Me</string>
     <string name="login_status_title">Login Status</string>
     <string name="login_status_content">Login Status: %1$s.</string>
+    <string name="login_status_logon">Logon</string>
+    <string name="login_status_logout">Logout</string>
+    <string name="login_status_unknown">Unknown</string>
+    <string name="login_status_failed_network">Failed due to bad network connection.</string>
+    <string name="login_status_need_refresh">Need refresh</string>
+    <string name="login_status_refreshing">Refreshing</string>
 </resources>

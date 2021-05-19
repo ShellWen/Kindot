@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import top.goforce.kindot.R
 import top.goforce.kindot.base.BaseFragment
+import top.goforce.kindot.data.network.entity.LoginStatusEnum
 import top.goforce.kindot.databinding.MeFragmentBinding
 
 class MeFragment : BaseFragment<MeFragmentBinding>(R.layout.me_fragment) {
@@ -22,15 +23,17 @@ class MeFragment : BaseFragment<MeFragmentBinding>(R.layout.me_fragment) {
     }
 
     private fun initViews() {
-        binding.swipeRefresh.setOnRefreshListener {
-            refreshLoginStatus()
+        binding.swipeRefresh.run {
+            // 下拉刷新监听器设置为刷新登录状态
+            setOnRefreshListener {
+                viewModel.refreshLoginStatus()
+            }
+            // 观察登陆状态，为 REFRESHING 时更新下拉刷新组件展示刷新状态
+            viewModel.loginStatus.observe(viewLifecycleOwner) {
+                isRefreshing = it == LoginStatusEnum.REFRESHING
+            }
         }
-    }
 
-    private fun refreshLoginStatus() {
-        binding.swipeRefresh.isRefreshing = true
-        viewModel.refreshLoginStatus()
-        binding.swipeRefresh.isRefreshing = false
     }
 
 }

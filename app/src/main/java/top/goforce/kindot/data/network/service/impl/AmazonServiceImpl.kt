@@ -24,7 +24,7 @@ class AmazonServiceImpl(private val client: OkHttpClient) : AmazonService {
             if ("/ap/signin" in afterUrl) {
                 LoginStatusEnum.LOGOUT
             } else {
-                LoginStatusEnum.LOGIN
+                LoginStatusEnum.LOGON
             }
         } catch (e: Throwable) {
             e.printStackTrace()

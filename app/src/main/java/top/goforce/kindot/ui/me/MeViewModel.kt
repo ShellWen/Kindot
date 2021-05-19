@@ -2,7 +2,6 @@ package top.goforce.kindot.ui.me
 
 import android.util.Log
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -16,11 +15,12 @@ import top.goforce.kindot.data.repos.CookiesRepos
 class MeViewModel : BaseViewModel(), KoinComponent {
     private val cookiesRepos: CookiesRepos by inject()
 
-    val loginStatus: LiveData<LoginStatusEnum> = getLoginStatus()
+    val loginStatus: LiveData<LoginStatusEnum> = getReposLoginStatus()
+    val loginStatusReadableText: LiveData<String> = cookiesRepos.getLoginStatusReadableText()
 
-    private fun getLoginStatus(): MutableLiveData<LoginStatusEnum> {
+    private fun getReposLoginStatus(): LiveData<LoginStatusEnum> {
         val reposLoginStatus = cookiesRepos.getLoginStatus()
-        if (reposLoginStatus.value == LoginStatusEnum.UNKNOWN)
+        if (reposLoginStatus.value == LoginStatusEnum.NEED_REFRESH)
             refreshLoginStatus()
         return reposLoginStatus
     }
